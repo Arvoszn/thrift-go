@@ -1,0 +1,12 @@
+# Named Cloudflare tunnel example for local hosting.
+# Copy to cloudflared.yml and edit. Setup:
+#   cloudflared tunnel login
+#   cloudflared tunnel create <tunnel-name>
+#   cloudflared tunnel route dns <tunnel-name> your-hostname.example.com
+#   cloudflared tunnel --config cloudflared.yml run <tunnel-name>
+tunnel: your-tunnel-name
+credentials-file: C:\Users\<you>\.cloudflared\<tunnel-id>.json
+ingress:
+  - hostname: your-hostname.example.com
+    service: http://127.0.0.1:4331
+  - service: http_status:404

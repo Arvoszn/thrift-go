@@ -1,0 +1,33 @@
+node_modules/
+.env
+.env.*
+!.env.example
+logs/
+data/
+PAUSED
+.paused*
+
+# Local secrets and operational files - never publish.
+config/
+cookie.txt
+deploy/
+review-artifacts/
+cloudflared.yml
+
+# Internal handoff notes (local only).
+CONTINUATION_NOTES.md
+HANDOVER_ARGELO_1CLICK.md
+TAKEOVER.md
+META_REVIEW.md
+
+# Legacy AI-reply persona (references third-party identifiers) - local only.
+src/brain.js
+
+# Scratch and host-specific scripts.
+test_ig.js
+open_playwright.bat
+scripts/scrape_ig.js
+scripts/navigate_meta.py
+
+*.log
+*.bak
